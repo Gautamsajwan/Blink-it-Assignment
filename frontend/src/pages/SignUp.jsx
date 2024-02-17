@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsEye } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import blinkitLogo from '../assets/blink-it.svg'
 
 function SignUp() {
   const [userName, setUserName] = useState("");
@@ -55,7 +56,8 @@ function SignUp() {
 
   return (
     <div className="text-white relative h-screen overflow-hidden font-montserrat flex flex-col justify-center items-center">
-      <div className="mt-10 p-8 rounded-lg bg-gray-800/30">
+      <img className="w-32" src={blinkitLogo} alt="blink it logo" />
+      <div className="mt-5 p-8 rounded-lg bg-gray-800/30">
         <form className="flex flex-col gap-2 w-[500px]">
           <label htmlFor="email" className="font-bold pl-1">Email</label>
           <input
@@ -94,7 +96,7 @@ function SignUp() {
             placeholder="enter your username"
           />
 
-          <button onClick={handleSignUp} className="mt-4 rounded-full w-fit m-auto font-bold px-10 py-2 outline outline-blue-500 hover:bg-blue-400 active:scale-95 transition duration-200 ease-in-out">
+          <button onClick={handleSignUp} className="mt-4 rounded-lg mx-1 font-bold px-10 py-2 outline outline-blue-500 hover:bg-blue-400 active:scale-95 transition duration-200 ease-in-out">
             Sign Up
           </button>
         </form>
